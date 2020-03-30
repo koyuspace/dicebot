@@ -29,7 +29,7 @@ def words(num, max):
         6: "six"
     }
     if max > 6:
-        return num
+        return str(num)
     else:
         return switcher.get(num, None)
 
