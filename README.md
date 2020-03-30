@@ -2,7 +2,7 @@
 
 A Mastodon bot that rolls a dice.
 
-**Production version**: <a rel="me" href="https://koyu.space/@dicebot" target="_blank">@dicebot@koyu.space</a>
+<a rel="me" href="https://koyu.space/@dicebot" target="_blank">**Production version**</a>
 
 ## Requirements
 
