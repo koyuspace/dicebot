@@ -1,0 +1,8 @@
+# Security 101: Never leak your credentials in commits!
+clientcred
+usercred
+creds.py
+
+# Also remove precompiled libs and generated images
+__pycache__
+dice.png
