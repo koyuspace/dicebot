@@ -37,11 +37,12 @@ class myListener(StreamListener):
         if notification["type"] == "mention":
             toot = str(html.document_fromstring(notification["status"]["content"]).text_content())
             if "roll" in toot.lower():
-                randnum = random.randint(1,6)
-                numbers = re.findall(r'\b\d+\b', toot)
-                maxnum = numbers[0]
+                maxnum = 6
+                temp = re.findall(r'\d+', toot)
+                numbers = list(map(int, temp))
                 if numbers:
-                    randnum = random.randint(1,maxnum)
+                    maxnum = numbers[0]
+                randnum = random.randint(1,maxnum)
                 W, H = (527,296)
                 im = Image.new("RGBA",(W,H),"#222233ff")
                 draw = ImageDraw.Draw(im)
