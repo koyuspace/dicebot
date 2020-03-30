@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-def fa(num):
+def fa(num, max):
     switcher = {
         1: chr(0xf525),
         2: chr(0xf528),
@@ -10,9 +10,16 @@ def fa(num):
         5: chr(0xf523),
         6: chr(0xf526)
     }
-    return switcher.get(num, None)
+    if max == 4:
+        return chr(0xf6d0)
+    elif max == 8:
+        return chr(0xf6d2)
+    elif max > 6:
+        return chr(0xf6cf)
+    else:
+        return switcher.get(num, None)
 
-def words(num):
+def words(num, max):
     switcher = {
         1: "one",
         2: "two",
@@ -21,4 +28,11 @@ def words(num):
         5: "five",
         6: "six"
     }
-    return switcher.get(num, None)
+    if max > 6:
+        return num
+    else:
+        return switcher.get(num, None)
+
+def emoji(num):
+    if num <= 6:
+        return "🎲"
