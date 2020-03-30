@@ -53,7 +53,7 @@ class myListener(StreamListener):
                 draw.text(xy=(x, y), text=dicelib.fa(randnum, maxnum), fill="#fe53e1", font=fontAwesome)
                 im.save("dice.png", "PNG")
                 print(notification["account"]["acct"]+" rolled a "+dicelib.words(randnum, maxnum))
-                mastodon.status_post("@"+notification["account"]["acct"]+" You rolled a "+dicelib.words(randnum, maxnum)+" "+dicelib.emoji(randnum), in_reply_to_id=notification["status"]["id"], visibility=notification["status"]["visibility"], media_ids=mastodon.media_post("dice.png"))
+                mastodon.status_post("@"+notification["account"]["acct"]+" You rolled a "+dicelib.words(randnum, maxnum)+" "+dicelib.emoji(maxnum), in_reply_to_id=notification["status"]["id"], visibility=notification["status"]["visibility"], media_ids=mastodon.media_post("dice.png"))
 
 listener = myListener()
 mastodon.stream_user(listener)

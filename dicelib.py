@@ -36,3 +36,5 @@ def words(num, max):
 def emoji(num):
     if num <= 6:
         return "🎲"
+    else:
+        return ""
