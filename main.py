@@ -56,4 +56,4 @@ class myListener(StreamListener):
                 mastodon.status_post("@"+notification["account"]["acct"]+" You rolled a "+dicelib.words(randnum, maxnum)+" "+dicelib.emoji(maxnum), in_reply_to_id=notification["status"]["id"], visibility=notification["status"]["visibility"], media_ids=mastodon.media_post("dice.png"))
 
 listener = myListener()
-mastodon.stream_user(listener)
+mastodon.stream_user(listener, run_async=True, reconnect_async=True, reconnect_async_wait_sec=5)
