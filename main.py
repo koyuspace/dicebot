@@ -59,4 +59,4 @@ listener = myListener()
 mastodon.stream_user(listener, run_async=True, reconnect_async=True, reconnect_async_wait_sec=5)
 
 while True:
-    pass
+    time.sleep(1)
