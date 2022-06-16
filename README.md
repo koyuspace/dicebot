@@ -11,7 +11,7 @@ A Mastodon bot that rolls a dice.
 
 ## Setup
 
-Install the requirements with `sudo pip3 install -r requirements.txt` and create a file called `creds.py` like this
+Install the requirements with `pip3 install -r requirements.txt` and create a file called `creds.py` like this
 
 ```
 instance = "https://koyu.space" # or any instance you like
